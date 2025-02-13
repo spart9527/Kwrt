@@ -31,8 +31,9 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        target: ["${{ github.event.client_payload.target }}"]
-        
+        target: [x86_64] 
+       # target: ["${{ github.event.client_payload.target }}"]
+      
     steps:
     - name: Checkout
       uses: actions/checkout@main
